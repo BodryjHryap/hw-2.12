@@ -47,7 +47,7 @@ class DepartmentServiceTest {
         //Подготовка ожидаемого результата
         when(employeeService.getAll()).thenReturn(Collections.emptyList());
 
-        String expectedMessage = "Сотрудник с максимальной зарплатой не найден";
+        String expectedMessage = "404 Сотрудник с максимальной зарплатой не найден";
 
         //Начало теста
         Exception exception = assertThrows(
@@ -81,7 +81,7 @@ class DepartmentServiceTest {
         //Подготовка ожидаемого результата
         when(employeeService.getAll()).thenReturn(Collections.emptyList());
 
-        String expectedMessage = "Сотрудник с минимальной зарплатой не найден";
+        String expectedMessage = "404 Сотрудник с минимальной зарплатой не найден";
 
         //Начало теста
         Exception exception = assertThrows(
